@@ -13,6 +13,10 @@ export const saveCandidate = (candidate: Candidate): void => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(savedCandidates));
 };
 
+export const updateSavedCandidates = (candidates: Candidate[]): void => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(candidates));
+};
+
 export const clearSavedCandidates = (): void => {
     localStorage.removeItem(STORAGE_KEY);
 };

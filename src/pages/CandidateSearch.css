@@ -1,0 +1,51 @@
+.candidate-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .candidate-search {
+    text-align: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    gap: 20px;
+  }
+  
+  .save-button {
+    background-color: #129c30;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .save-button:hover {
+    background-color: #4bd171;
+  }
+  
+  .discard-button {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .discard-button:hover {
+    background-color: #ff4d4d;
+  }
+  
+  
