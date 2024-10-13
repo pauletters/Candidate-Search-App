@@ -1,0 +1,146 @@
+.potential-candidates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .candidates-table {
+    width: 80%;
+    border-collapse:separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    position: relative;
+  }
+  
+  .candidates-table th {
+    background-color: rgb(29, 28, 28);
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .candidates-table td {
+    padding: 5px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .candidates-table tr:nth-child(even) {
+    background-color: rgb(29, 28, 28);
+    text-align: center;
+  }
+  
+  .candidates-table tr:nth-child(odd) {
+    background-color: rgb(77, 75, 75);
+    text-align: center;
+  }
+  
+  .candidates-table .avatar-column {
+    width: 100px;
+    min-width: 60px;
+    max-width: 100px;
+  }
+  
+  .candidate-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .candidates-table .name-column {
+    width: 12%;
+  }
+  
+  .candidates-table .username-column {
+    width: 12%;
+  }
+  
+  .candidates-table .location-column {
+    width: 12%;
+  }
+  
+  .candidates-table .email-column {
+    width: 15%;
+    position: relative;
+  }
+  
+  .candidates-table .email-column:hover {
+    overflow: visible;
+  }
+  
+  .candidates-table .email-column span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .candidates-table .email-column:hover span {
+    position: absolute;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .candidates-table .profile-column {
+    width: 10%;
+  }
+  
+  .candidates-table .company-column {
+    width: 12%;
+  }
+  
+  .candidates-table .bio-column {
+    width: 15%;
+    position:relative;
+  }
+  
+  .candidates-table .bio-column:hover {
+    overflow: visible;
+  }
+  
+  .candidates-table .bio-column span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .candidates-table .bio-column:hover span {
+    position: absolute;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .candidates-table .reject-column {
+    width: 8%;
+  }
+  
+  
+  
+  .reject-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .reject-button:hover {
+    background-color: #ff3333;
+  }
