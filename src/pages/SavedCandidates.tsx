@@ -3,6 +3,8 @@ import { Candidate } from '../interfaces/Candidate.interface';
 import { getSavedCandidates } from '../utils/storage';
 import './SavedCandidates.css';
 
+// This component is used to display the saved candidates page. It fetches the saved candidates from the 
+// local storage and displays them in a table.
 const SavedCandidates: React.FC = () => {
   const [savedCandidates, setSavedCandidates] = useState<Candidate[]>([]);
 
@@ -10,6 +12,7 @@ const SavedCandidates: React.FC = () => {
     setSavedCandidates(getSavedCandidates());
   }, []);
 
+  // This function is used to remove a candidate from the saved candidates list.
   const handleReject = (username: string) => {
     const updatedCandidates = savedCandidates.filter(candidate => candidate.username !== username);
     setSavedCandidates(updatedCandidates);
@@ -20,7 +23,7 @@ const SavedCandidates: React.FC = () => {
     return <div>No potential candidates are available to view</div>;
   }
 
-  
+  // What is returned is a table that displays the saved candidates and their information.
   return (
     <div className='potential-candidates'>
       <h1>Potential Candidates</h1>

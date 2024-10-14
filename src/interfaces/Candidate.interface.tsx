@@ -1,4 +1,4 @@
-// TODO: Create an interface for the Candidate objects returned by the API
+// This is the candidate interface that is used to define the structure of the candidate object.
 interface Candidate {
     name: string | null;
     username: string;

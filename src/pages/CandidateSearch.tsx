@@ -4,6 +4,9 @@ import { Candidate } from '../interfaces/Candidate.interface';
 import { saveCandidate } from '../utils/storage';
 import './CandidateSearch.css';
 
+// This component is used to display the candidate search page. It fetches candidates from the GitHub API and 
+// displays them one at a time. The user can save or discard a candidate utilizing handleSaveCandidate and 
+// moveToNextCandidate which are both represented as buttons.
 const CandidateSearch: React.FC = () => {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [currentCandidateIndex, setCurrentCandidateIndex] = useState(0);
@@ -59,6 +62,7 @@ if (error) {
   </div>;
 }
 
+// This message will be displayed if there are no more candidates to display
 if (candidates.length === 0) {
   return <div>No more candidates available</div>;
 }
