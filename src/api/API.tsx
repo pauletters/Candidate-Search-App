@@ -1,5 +1,6 @@
 import { Candidate } from "../interfaces/Candidate.interface";
 
+// This function fetches information from the GitHub API for a given username
 const fetchDetailedUserInfo = async (username: string): Promise<Candidate | null> => {
   try {
   const response = await fetch(`https://api.github.com/users/${username}`, {
@@ -30,6 +31,7 @@ const fetchDetailedUserInfo = async (username: string): Promise<Candidate | null
   }
 };
 
+// This function is what randomly fetches users from the GitHub API
 const searchGithub = async (): Promise<Candidate[]> => {
   try {
     const start = Math.floor(Math.random() * 100000000) + 1;
@@ -52,11 +54,12 @@ const searchGithub = async (): Promise<Candidate[]> => {
     const users = await response.json();
     console.log('Initial GitHub API Response:', users);
 
-    // Fetch detailed information for each user
+    // This fetches detailed user information for each individual user
     const detailedUsers = await Promise.all(
       users.map((user: any) => fetchDetailedUserInfo(user.login))
     );
 
+    // This filters out any null values from the detailedUsers array and only keeps the valid users
     const validUsers = detailedUsers.filter((user): user is Candidate => user !== null);
 
     console.log('Detailed Users:', validUsers);

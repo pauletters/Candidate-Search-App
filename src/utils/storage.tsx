@@ -1,5 +1,7 @@
 import { Candidate } from '../interfaces/Candidate.interface';
 
+// This is where the saved candidates are stored in local storage and retrieved from local storage. It also has a function
+// remove saved candidates from local storage and update the saved candidates in local storage.
 const STORAGE_KEY = 'savedCandidates';
 
 export const getSavedCandidates = (): Candidate[] => {

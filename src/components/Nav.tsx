@@ -5,6 +5,8 @@ interface NavProps {
   currentSection: string;
 }
 
+// This component is used to display the navigation bar at the top of the page. Use Effect is used to update 
+// the section based on the current path. NavLink is used to navigate to different pages.
 const Nav = ({currentSection}: NavProps) => {
   const location = useLocation();
   const [section, setSection] = useState(currentSection);
